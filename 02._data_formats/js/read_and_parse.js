@@ -4,7 +4,7 @@ const parser = new xml2js.Parser();
 const yaml = require('js-yaml');
 
 // CSV
-fs.readFile('./me.csv', 'utf8', (err, data) => {
+fs.readFile('../me.csv', 'utf8', (err, data) => {
     if (err) throw err;
 
     // Split the CSV data into rows
@@ -30,26 +30,33 @@ fs.readFile('./me.csv', 'utf8', (err, data) => {
 });
 
 // JSON
-fs.readFile('./me.json', 'utf8', (err, data) => {
+fs.readFile('../me.json', 'utf8', (err, data) => {
     if (err) throw err;
     const obj = JSON.parse(data);
     console.log(obj);
 });
 
 // XML
-fs.readFile('./me.xml', 'utf8', (err, data) => {
+fs.readFile('../me.xml', 'utf8', (err, data) => {
     if (err) throw err;
     parser.parseString(data, (err, result) => {
         if (err) throw err;
+        console.log(result['me']);
         console.log(result['me']['hobbies']);
     });
 });
 
 // YAML
-fs.readFile('./me.yaml', 'utf8', (err, data) => {
+fs.readFile('../me.yaml', 'utf8', (err, data) => {
     if (err) throw err;
     const obj = yaml.load(data);
     console.log(obj);
+});
+
+// TXT
+fs.readFile('../me.txt', 'utf8', (err, data) => {
+    if (err) throw err;
+    console.log(data);
 });
 
 
