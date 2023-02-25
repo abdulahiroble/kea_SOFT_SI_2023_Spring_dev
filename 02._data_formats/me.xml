@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <me>
-    <name>Anders</name>
-    <age>33</age>
+    <name>Abdulahi</name>
+    <age>25</age>
     <hobbies>
-        <hobby>Programming</hobby>
-        <hobby>Music</hobby>
+        <hobby>Manga</hobby>
+        <hobby>Anime</hobby>
     </hobbies>
 </me>
