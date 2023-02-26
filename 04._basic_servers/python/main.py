@@ -1,13 +1,6 @@
 from fastapi import FastAPI
+import routes
 
 app = FastAPI()
 
-@app.get("/")
-def _():
-    return { "message": "First FastAPI route" }
-
-@app.get("/newroute")
-def _():
-    print(type({ "message": "This is my second route" }))
-    return { "message": "This is my second route" }
-
+app.include_router(routes.routes)
